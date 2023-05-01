@@ -1,0 +1,449 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Busbud</title>
+        <link rel="shortcut icon" href="img/favicon.png" type="image/x-icon" />
+        <link
+            rel="stylesheet"
+            href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+            integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="
+            crossorigin="anonymous"
+            referrerpolicy="no-referrer"
+        />
+        <link
+            rel="stylesheet"
+            href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css"
+            integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65"
+            crossorigin="anonymous"
+        />
+        <link rel="stylesheet" href="css/style.css" />
+    </head>
+    <body>
+        <header>
+            <div class="container">
+                <nav class="flex-block">
+                    <div class="nav__left flex-block">
+                        <a class="nav__left__logo">
+                            <svg
+                                height="40"
+                                viewBox="0 0 439 131"
+                                role="img"
+                                aria-label="Busbud.com"
+                                class="nav__left__svg"
+                                fill="none"
+                                xmlns="http://www.w3.org/2000/svg"
+                            >
+                                <path
+                                    d="M42.01 100.58L42 101v24a6 6 0 1 0 12 0v-24l-.01-.42c-.58.3-1.15.56-1.73.75-2.77.9-5.75.9-8.52 0-.58-.2-1.15-.44-1.73-.75z"
+                                    fill="#FFAB00"
+                                ></path>
+                                <path
+                                    d="M54 100.57c-.58.31-1.15.56-1.74.76-2.77.9-5.75.9-8.52 0-.59-.2-1.16-.45-1.74-.76v-6c.58.31 1.15.56 1.74.76 2.77.9 5.75.9 8.52 0 .59-.2 1.16-.45 1.74-.76v6z"
+                                    fill="#DA771B"
+                                ></path>
+                                <path
+                                    d="M32.4 9.89c5.46-5.46 8.2-8.2 11.34-9.22 2.77-.9 5.75-.9 8.52 0C55.41 1.7 58.14 4.43 63.6 9.9l22.51 22.5c5.46 5.46 8.2 8.2 9.22 11.34.9 2.77.9 5.75 0 8.52-1.03 3.15-3.76 5.88-9.22 11.34L63.6 86.11c-5.46 5.46-8.2 8.2-11.34 9.22-2.77.9-5.75.9-8.52 0-3.15-1.03-5.88-3.76-11.34-9.22L9.89 63.6c-5.46-5.46-8.2-8.2-9.22-11.34-.9-2.77-.9-5.75 0-8.52C1.7 40.59 4.43 37.86 9.9 32.4L32.4 9.89z"
+                                    fill="#FFAB00"
+                                ></path>
+                                <path d="M20.07 46a28 28 0 0 0 55.86 0H69.9a22 22 0 0 1-43.82 0h-6.02z" fill="#DA771B"></path>
+                                <path
+                                    d="M182.05 52.09h12.42v1.41c0 9.43-.05 19.4.04 28.83.02 2.16.28 4.4.9 6.47 1.44 4.78 5.3 6.25 9.68 6.07 5.9-.26 9.03-3.58 9.45-9.78.08-1.21.12-2.44.12-3.65V52.09h12.43v.74c-.01 10.53.03 21.6-.06 32.13a20.25 20.25 0 0 1-5.78 14.36c-3.05 3.16-6.9 4.95-11.18 5.76-5.38 1.01-10.66.67-15.72-1.53-6.5-2.82-10.42-7.72-11.74-14.59-.39-1.98-.5-4.05-.52-6.07-.05-9.7-.02-19.95-.02-29.65-.02-.36-.02-.7-.02-1.15zm153.4 0h12.42v1.41c0 9.43-.06 19.4.04 28.83.02 2.16.28 4.4.9 6.47 1.43 4.78 5.29 6.25 9.68 6.07 5.9-.26 9.03-3.58 9.44-9.78.09-1.21.13-2.44.13-3.65V52.09h12.43v.74c-.01 10.53.02 21.6-.06 32.13a20.25 20.25 0 0 1-5.78 14.36c-3.06 3.16-6.9 4.95-11.19 5.76-5.37 1.01-10.65.67-15.71-1.53-6.5-2.82-10.42-7.72-11.75-14.59-.38-1.98-.5-4.05-.51-6.07-.05-9.7-.02-19.95-.02-29.65-.02-.36-.02-.7-.02-1.15z"
+                                    fill="currentColor"
+                                ></path>
+                                <path
+                                    fill-rule="evenodd"
+                                    clip-rule="evenodd"
+                                    d="M167.48 55.63a23.7 23.7 0 0 1 9.2 14 34.3 34.3 0 0 1-.87 19.47 23.1 23.1 0 0 1-11.53 13.41 26.77 26.77 0 0 1-12.55 3.09c-15 0-27.55-7.65-27.55-29.23V32h12.55v25.27l.34-.22c.18-.11.31-.2.42-.31 3.35-3.5 7.59-5.11 12.31-5.7 6.52-.81 12.46.73 17.68 4.6zM148.9 95.17c5.65.59 10.34-1.15 13.42-6.07 2.09-3.33 2.78-7.07 2.78-10.98 0-6.98-2.72-13.75-9.08-16.05-6.37-2.32-14-.67-17.31 6.2-3.01 6.22-3 12.64-.4 19 1.91 4.65 5.5 7.37 10.59 7.9zm171.97-39.54a23.7 23.7 0 0 1 9.2 14 34.3 34.3 0 0 1-.87 19.47 23.1 23.1 0 0 1-11.53 13.41 26.77 26.77 0 0 1-12.55 3.09c-15 0-27.55-7.65-27.55-29.23V32h12.55v25.27l.34-.22c.18-.11.31-.2.42-.31 3.35-3.5 7.59-5.11 12.31-5.7 6.52-.81 12.46.73 17.68 4.6zm-18.59 39.54c5.65.59 10.34-1.15 13.42-6.07 2.09-3.33 2.77-7.07 2.77-10.98 0-6.98-2.71-13.75-9.07-16.05-6.37-2.32-14-.67-17.31 6.2-3.01 6.22-3 12.64-.4 19 1.91 4.65 5.5 7.37 10.59 7.9zM425.9 32v24.52c-.49-.35-.94-.7-1.39-1.05a24.44 24.44 0 0 0-2.82-1.98c-5.2-2.95-10.86-3.06-16.5-2-9.09 1.7-15.24 7.15-18.3 15.66a32.08 32.08 0 0 0 .07 22.68c2.15 5.68 5.97 10 11.4 12.87a24.6 24.6 0 0 0 14.74 2.57c5.25-.63 9.9-2.4 13.3-6.64l.67-.86v6.08h5.17c1.37.02 2.74.01 4.1 0h2.04V32h-12.49zm-11.63 63.05a12.2 12.2 0 0 0 8.94-5.73 19.77 19.77 0 0 0 3.13-11c0-5.32-1.43-12.73-8.13-15.93-6.77-3.12-16.36-1.35-19.37 8.1a25.37 25.37 0 0 0-.37 14.05c.89 3.56 2.7 6.59 5.87 8.64 3.04 1.96 6.45 2.32 9.93 1.87z"
+                                    fill="currentColor"
+                                ></path>
+                                <path
+                                    d="M253 105.62c-4.4 0-8.15-.72-11.26-2.16-3.12-1.44-5.53-3.21-7.24-5.32a16.53 16.53 0 0 1-3.36-6.49l11.1-4.11a11.42 11.42 0 0 0 3.67 6.02c1.84 1.51 4.35 2.26 7.53 2.26 2.48 0 4.39-.53 5.73-1.6a5 5 0 0 0 2.06-4.12 4.9 4.9 0 0 0-1-3.12c-.64-.83-1.78-1.59-3.42-2.26-1.6-.7-3.92-1.4-6.93-2.1-5.06-1.21-9.1-3.07-12.11-5.58-3.02-2.52-4.52-6-4.52-10.45 0-3.18.72-5.95 2.16-8.3a13.92 13.92 0 0 1 6.38-5.47c2.81-1.3 6.23-1.96 10.25-1.96 3.95 0 7.35.62 10.2 1.86a18.17 18.17 0 0 1 6.83 4.82 15.88 15.88 0 0 1 3.41 6.28l-11.15 4.12a9.43 9.43 0 0 0-3.37-5.12 9.37 9.37 0 0 0-5.97-1.86c-2.15 0-3.82.52-5.03 1.56a4.8 4.8 0 0 0-1.76 3.82c0 1.1.27 2.06.8 2.86.54.8 1.51 1.54 2.92 2.21 1.44.64 3.47 1.26 6.08 1.86a51.6 51.6 0 0 1 10.05 3.26 15.41 15.41 0 0 1 6.28 5.03c1.54 2.1 2.3 4.84 2.3 8.19 0 3.31-.86 6.17-2.6 8.59a16.16 16.16 0 0 1-7.29 5.42 28.9 28.9 0 0 1-10.75 1.86z"
+                                    fill="currentColor"
+                                ></path>
+                            </svg>
+                        </a>
+                        <div class="nav__left__bus flex-block">
+                            <i class="fa-solid fa-bus"></i>
+                            <span>Автобусы</span>
+                        </div>
+                    </div>
+                    <div class="nav__right">
+                        <ul class="flex-block">
+                            <li><a href="#">Русский</a></li>
+                            <li><a href="#">Помощь</a></li>
+                            <li><a href="#">Выйти</a></li>
+                        </ul>
+                    </div>
+                </nav>
+                <div class="main">
+                    <div class="main__content">
+                        <h1>Найдите самые дешевые автобусные билеты для своей следующей поездки</h1>
+                        <span>Легко сравнивайте цены и бронируйте билеты на следующую поездку через Busbud</span>
+                    </div>
+                </div>
+                <div class="form">
+                    <form class="flex-block">
+                        <div class="form__location flex-block">
+                            <div class="form__location__block">
+                                <label for="">Пункт отправления</label>
+                                <input type="text" placeholder="Пункт отправления" />
+                            </div>
+                            <div class="form__location__swap">
+                                <i class="fa-solid fa-right-left"></i>
+                            </div>
+                            <div class="form__location__block">
+                                <label for="">Место назначения</label>
+                                <input type="text" placeholder="Место назначения" />
+                            </div>
+                        </div>
+                        <div class="form__date flex-block">
+                            <div class="form__date__block">
+                                <label for="">Дата</label>
+                                <input type="date" placeholder="пн, 1 мая" />
+                            </div>
+                            <div class="form__date__block">
+                                <label for="">Дата обратной поездки</label>
+                                <input type="date" placeholder="Необязательно" />
+                            </div>
+                            <div class="form__date__block pass">
+                                <label for="">Пассажиры</label>
+                                <input type="text" placeholder="1 пассажир" />
+                            </div>
+                            <button>
+                                <i class="fa-solid fa-magnifying-glass"></i>
+                                <span>Поиск</span>
+                            </button>
+                        </div>
+                    </form>
+                </div>
+                <div class="advantages flex-block">
+                    <div class="advantages__item flex-block">
+                        <div class="advantages__item__img">
+                            <img src="img/ad_first.svg" alt="" />
+                        </div>
+                        <div class="advantages__item__text">
+                            <div class="advantages__item__text__title">Ваша поездка — ваши приоритеты</div>
+                            <div class="advantages__item__text__descr">
+                                Ограничены в бюджете? Плотный график? Закажите билеты с учетом потребностей.
+                            </div>
+                        </div>
+                    </div>
+                    <div class="advantages__item flex-block">
+                        <div class="advantages__item__img">
+                            <img src="img/ad_second.svg" alt="" />
+                        </div>
+                        <div class="advantages__item__text">
+                            <div class="advantages__item__text__title">Глобальный охват</div>
+                            <div class="advantages__item__text__descr">Сэкономьте время, сравнив сразу все варианты автобусных поездок.</div>
+                        </div>
+                    </div>
+                    <div class="advantages__item flex-block">
+                        <div class="advantages__item__img">
+                            <img src="img/ad_third.svg" alt="" />
+                        </div>
+                        <div class="advantages__item__text">
+                            <div class="advantages__item__text__title">Круглосуточная поддержка</div>
+                            <div class="advantages__item__text__descr">Наши лучшие специалисты по железнодорожным поездкам всегда готовы помочь.</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </header>
+        <section class="table">
+            <div class="container">
+                <h2>Грфик</h2>
+                <span>Онлайн раписание</span>
+                <table class="table table-striped">
+                    <thead>
+                        <tr>
+                            <th scope="col">Маршрут</th>
+                            <th scope="col">Выезд</th>
+                            <th scope="col">День</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Москва-Самара</td>
+                            <td>08:00</td>
+                            <td>Сегодня</td>
+                        </tr>
+                        <tr>
+                            <td>Москва-Санкт-Петербург</td>
+                            <td>09:00</td>
+                            <td>Сегодня</td>
+                        </tr>
+                        <tr>
+                            <td>Москва-Воронеж</td>
+                            <td>11:45</td>
+                            <td>Сегодня</td>
+                        </tr>
+                        <tr>
+                            <td>Москва-Нижний Новгород</td>
+                            <td>12:30</td>
+                            <td>Сегодня</td>
+                        </tr>
+                        <tr>
+                            <td>Москва-Екатеринбург</td>
+                            <td>13:00</td>
+                            <td>Сегодня</td>
+                        </tr>
+                        <tr>
+                            <td>Москва-Краснодар</td>
+                            <td>14:15</td>
+                            <td>Сегодня</td>
+                        </tr>
+                        <tr>
+                            <td>Москва-Казань</td>
+                            <td>16:15</td>
+                            <td>Сегодня</td>
+                        </tr>
+                        <tr>
+                            <td>Москва-Ростов-на-Дону</td>
+                            <td>17:30</td>
+                            <td>Сегодня</td>
+                        </tr>
+                        <tr>
+                            <td>Москва-Калининград</td>
+                            <td>19:00</td>
+                            <td>Сегодня</td>
+                        </tr>
+                        <tr>
+                            <td>Москва-Омск</td>
+                            <td>09:30</td>
+                            <td>Завтра</td>
+                        </tr>
+                        <tr>
+                            <td>Москва-Симферополь</td>
+                            <td>10:45</td>
+                            <td>Завтра</td>
+                        </tr>
+                        <tr>
+                            <td>Москва-Уфа</td>
+                            <td>11:00</td>
+                            <td>Завтра</td>
+                        </tr>
+                        <tr>
+                            <td>Москва-Саратов</td>
+                            <td>13:15</td>
+                            <td>Завтра</td>
+                        </tr>
+                        <tr>
+                            <td>Москва-Челябинск</td>
+                            <td>15:30</td>
+                            <td>Завтра</td>
+                        </tr>
+                        <tr>
+                            <td>Москва-Новосибирск</td>
+                            <td>20:00</td>
+                            <td>Завтра</td>
+                        </tr>
+                        <tr>
+                            <td>Москва-Пермь</td>
+                            <td>18:45</td>
+                            <td>Завтра</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </section>
+        <section class="reviews">
+            <div class="container">
+                <div class="reviews__content">
+                    <h2>Тревел-блогеры по всему миру доверяют Busbud</h2>
+                    <div class="reviews__content__wrapper">
+                        <div class="reviews__content__wrapper__item">
+                            <p class="reviews__content__wrapper__item__descr">
+                                Я не знаю другого столь же всеобъемлющего сайта, как Busbud. Он действительно удобен.
+                            </p>
+                            <div class="reviews__content__wrapper__item__client">
+                                <div class="reviews__content__wrapper__item__client__img"><img src="img/matthew-kepnes.jpg" alt="" /></div>
+                                <div class="reviews__content__wrapper__item__client__descr">
+                                    <div class="reviews__content__wrapper__item__client__descr__name">Мэттью Кэпнес</div>
+                                    <div class="reviews__content__wrapper__item__client__descr__role">Nomadic Matt</div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="reviews__content__wrapper__item">
+                            <p class="reviews__content__wrapper__item__descr">Сайт и мобильное приложение Busbud крайне просты в использовании.</p>
+                            <div class="reviews__content__wrapper__item__client">
+                                <div class="reviews__content__wrapper__item__client__img"><img src="img/rachel-bale.jpg" alt="" /></div>
+                                <div class="reviews__content__wrapper__item__client__descr">
+                                    <div class="reviews__content__wrapper__item__client__descr__name">Рэйчел Бэйл</div>
+                                    <div class="reviews__content__wrapper__item__client__descr__role">Department of Wandering</div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="reviews__content__wrapper__item">
+                            <p class="reviews__content__wrapper__item__descr">
+                                Busbud оставляет место для спонтанности и изменений в поездках в последнюю минуту.
+                            </p>
+                            <div class="reviews__content__wrapper__item__client">
+                                <div class="reviews__content__wrapper__item__client__img"><img src="img/gerard-and-kieu.jpg" alt="" /></div>
+                                <div class="reviews__content__wrapper__item__client__descr">
+                                    <div class="reviews__content__wrapper__item__client__descr__name">Жерар и Кье</div>
+                                    <div class="reviews__content__wrapper__item__client__descr__role">GQ Trippin</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="bus">
+                    <div class="bus__content flex-block">
+                        <div class="bus__img">
+                            <img src="img/bus-companies.svg" alt="" />
+                        </div>
+                        <h2>Мы сотрудничаем с самыми популярными автобусными компаниями в мире</h2>
+                        <div class="bus__wrapper">
+                            <div class="bus__wrapper__item"><img src="img/busfor.avif" alt="" /></div>
+                            <div class="bus__wrapper__item"><img src="img/lux_express.avif" alt="" /></div>
+                            <div class="bus__wrapper__item"><img src="img/sindbad.avif" alt="" /></div>
+                            <div class="bus__wrapper__item"><img src="img/regiojet-studentagency.avif" alt="" /></div>
+                            <div class="bus__wrapper__item"><img src="img/ecoline-logo.png" alt="" /></div>
+                            <div class="bus__wrapper__item"><img src="img/logo_flixbus.avif" alt="" /></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="busbud">
+            <div class="container">
+                <div class="busbud__wrapper">
+                    <div class="busbud__wrapper__left">
+                        <div class="busbud__wrapper__left__title">Преимущества Busbud</div>
+                        <div class="busbud__wrapper__left__subtitle">Быстрое оформление и оплата заказа</div>
+                        <div class="busbud__wrapper__left__text">
+                            <ul>
+                                <li>Простое управление и отмена поездок</li>
+                                <li>Сохранение данных о способе оплаты и платежных реквизитов</li>
+                                <li>До 5 пассажиров на аккаунт!</li>
+                            </ul>
+                        </div>
+                        <button class="busbud__wrapper__left__btn">Создать аккаунт</button>
+                    </div>
+                    <div class="busbud__wrapper__right">
+                        <img src="img/bg2.svg" alt="" />
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="link">
+            <div class="container">
+                <div class="link__wrapper">
+                    <div class="link__wrapper__item">
+                        <div class="link__wrapper__item__logo">
+                            <svg
+                                height="40"
+                                viewBox="0 0 439 131"
+                                role="img"
+                                aria-label="Busbud.com"
+                                class="s37"
+                                fill="none"
+                                xmlns="http://www.w3.org/2000/svg"
+                            >
+                                <path
+                                    d="M42.01 100.58L42 101v24a6 6 0 1 0 12 0v-24l-.01-.42c-.58.3-1.15.56-1.73.75-2.77.9-5.75.9-8.52 0-.58-.2-1.15-.44-1.73-.75z"
+                                    fill="#FFAB00"
+                                ></path>
+                                <path
+                                    d="M54 100.57c-.58.31-1.15.56-1.74.76-2.77.9-5.75.9-8.52 0-.59-.2-1.16-.45-1.74-.76v-6c.58.31 1.15.56 1.74.76 2.77.9 5.75.9 8.52 0 .59-.2 1.16-.45 1.74-.76v6z"
+                                    fill="#DA771B"
+                                ></path>
+                                <path
+                                    d="M32.4 9.89c5.46-5.46 8.2-8.2 11.34-9.22 2.77-.9 5.75-.9 8.52 0C55.41 1.7 58.14 4.43 63.6 9.9l22.51 22.5c5.46 5.46 8.2 8.2 9.22 11.34.9 2.77.9 5.75 0 8.52-1.03 3.15-3.76 5.88-9.22 11.34L63.6 86.11c-5.46 5.46-8.2 8.2-11.34 9.22-2.77.9-5.75.9-8.52 0-3.15-1.03-5.88-3.76-11.34-9.22L9.89 63.6c-5.46-5.46-8.2-8.2-9.22-11.34-.9-2.77-.9-5.75 0-8.52C1.7 40.59 4.43 37.86 9.9 32.4L32.4 9.89z"
+                                    fill="#FFAB00"
+                                ></path>
+                                <path d="M20.07 46a28 28 0 0 0 55.86 0H69.9a22 22 0 0 1-43.82 0h-6.02z" fill="#DA771B"></path>
+                                <path
+                                    d="M182.05 52.09h12.42v1.41c0 9.43-.05 19.4.04 28.83.02 2.16.28 4.4.9 6.47 1.44 4.78 5.3 6.25 9.68 6.07 5.9-.26 9.03-3.58 9.45-9.78.08-1.21.12-2.44.12-3.65V52.09h12.43v.74c-.01 10.53.03 21.6-.06 32.13a20.25 20.25 0 0 1-5.78 14.36c-3.05 3.16-6.9 4.95-11.18 5.76-5.38 1.01-10.66.67-15.72-1.53-6.5-2.82-10.42-7.72-11.74-14.59-.39-1.98-.5-4.05-.52-6.07-.05-9.7-.02-19.95-.02-29.65-.02-.36-.02-.7-.02-1.15zm153.4 0h12.42v1.41c0 9.43-.06 19.4.04 28.83.02 2.16.28 4.4.9 6.47 1.43 4.78 5.29 6.25 9.68 6.07 5.9-.26 9.03-3.58 9.44-9.78.09-1.21.13-2.44.13-3.65V52.09h12.43v.74c-.01 10.53.02 21.6-.06 32.13a20.25 20.25 0 0 1-5.78 14.36c-3.06 3.16-6.9 4.95-11.19 5.76-5.37 1.01-10.65.67-15.71-1.53-6.5-2.82-10.42-7.72-11.75-14.59-.38-1.98-.5-4.05-.51-6.07-.05-9.7-.02-19.95-.02-29.65-.02-.36-.02-.7-.02-1.15z"
+                                    fill="currentColor"
+                                ></path>
+                                <path
+                                    fill-rule="evenodd"
+                                    clip-rule="evenodd"
+                                    d="M167.48 55.63a23.7 23.7 0 0 1 9.2 14 34.3 34.3 0 0 1-.87 19.47 23.1 23.1 0 0 1-11.53 13.41 26.77 26.77 0 0 1-12.55 3.09c-15 0-27.55-7.65-27.55-29.23V32h12.55v25.27l.34-.22c.18-.11.31-.2.42-.31 3.35-3.5 7.59-5.11 12.31-5.7 6.52-.81 12.46.73 17.68 4.6zM148.9 95.17c5.65.59 10.34-1.15 13.42-6.07 2.09-3.33 2.78-7.07 2.78-10.98 0-6.98-2.72-13.75-9.08-16.05-6.37-2.32-14-.67-17.31 6.2-3.01 6.22-3 12.64-.4 19 1.91 4.65 5.5 7.37 10.59 7.9zm171.97-39.54a23.7 23.7 0 0 1 9.2 14 34.3 34.3 0 0 1-.87 19.47 23.1 23.1 0 0 1-11.53 13.41 26.77 26.77 0 0 1-12.55 3.09c-15 0-27.55-7.65-27.55-29.23V32h12.55v25.27l.34-.22c.18-.11.31-.2.42-.31 3.35-3.5 7.59-5.11 12.31-5.7 6.52-.81 12.46.73 17.68 4.6zm-18.59 39.54c5.65.59 10.34-1.15 13.42-6.07 2.09-3.33 2.77-7.07 2.77-10.98 0-6.98-2.71-13.75-9.07-16.05-6.37-2.32-14-.67-17.31 6.2-3.01 6.22-3 12.64-.4 19 1.91 4.65 5.5 7.37 10.59 7.9zM425.9 32v24.52c-.49-.35-.94-.7-1.39-1.05a24.44 24.44 0 0 0-2.82-1.98c-5.2-2.95-10.86-3.06-16.5-2-9.09 1.7-15.24 7.15-18.3 15.66a32.08 32.08 0 0 0 .07 22.68c2.15 5.68 5.97 10 11.4 12.87a24.6 24.6 0 0 0 14.74 2.57c5.25-.63 9.9-2.4 13.3-6.64l.67-.86v6.08h5.17c1.37.02 2.74.01 4.1 0h2.04V32h-12.49zm-11.63 63.05a12.2 12.2 0 0 0 8.94-5.73 19.77 19.77 0 0 0 3.13-11c0-5.32-1.43-12.73-8.13-15.93-6.77-3.12-16.36-1.35-19.37 8.1a25.37 25.37 0 0 0-.37 14.05c.89 3.56 2.7 6.59 5.87 8.64 3.04 1.96 6.45 2.32 9.93 1.87z"
+                                    fill="currentColor"
+                                ></path>
+                                <path
+                                    d="M253 105.62c-4.4 0-8.15-.72-11.26-2.16-3.12-1.44-5.53-3.21-7.24-5.32a16.53 16.53 0 0 1-3.36-6.49l11.1-4.11a11.42 11.42 0 0 0 3.67 6.02c1.84 1.51 4.35 2.26 7.53 2.26 2.48 0 4.39-.53 5.73-1.6a5 5 0 0 0 2.06-4.12 4.9 4.9 0 0 0-1-3.12c-.64-.83-1.78-1.59-3.42-2.26-1.6-.7-3.92-1.4-6.93-2.1-5.06-1.21-9.1-3.07-12.11-5.58-3.02-2.52-4.52-6-4.52-10.45 0-3.18.72-5.95 2.16-8.3a13.92 13.92 0 0 1 6.38-5.47c2.81-1.3 6.23-1.96 10.25-1.96 3.95 0 7.35.62 10.2 1.86a18.17 18.17 0 0 1 6.83 4.82 15.88 15.88 0 0 1 3.41 6.28l-11.15 4.12a9.43 9.43 0 0 0-3.37-5.12 9.37 9.37 0 0 0-5.97-1.86c-2.15 0-3.82.52-5.03 1.56a4.8 4.8 0 0 0-1.76 3.82c0 1.1.27 2.06.8 2.86.54.8 1.51 1.54 2.92 2.21 1.44.64 3.47 1.26 6.08 1.86a51.6 51.6 0 0 1 10.05 3.26 15.41 15.41 0 0 1 6.28 5.03c1.54 2.1 2.3 4.84 2.3 8.19 0 3.31-.86 6.17-2.6 8.59a16.16 16.16 0 0 1-7.29 5.42 28.9 28.9 0 0 1-10.75 1.86z"
+                                    fill="currentColor"
+                                ></path>
+                            </svg>
+                        </div>
+                        <div class="link__wrapper__item__social">
+                            <i class="fa-brands fa-instagram"></i>
+                            <span>Instagram</span>
+                        </div>
+                        <div class="link__wrapper__item__social">
+                            <i class="fa-brands fa-facebook"></i>
+                            <span>Facebook</span>
+                        </div>
+                        <div class="link__wrapper__item__social">
+                            <i class="fa-brands fa-twitter"></i>
+                            <span>Twitter</span>
+                        </div>
+                    </div>
+                    <div class="link__wrapper__item">
+                        <p>КОМПАНИЯ</p>
+                        <ul>
+                            <li>О проекте</li>
+                            <li>Вакансии</li>
+                            <li>Для прессы</li>
+                            <li>Блог</li>
+                            <li>Стать партнером</li>
+                            <li>Контакты</li>
+                        </ul>
+                    </div>
+                    <div class="link__wrapper__item">
+                        <p>Глобальный охват</p>
+                        <ul>
+                            <li>Все автобусные и железнодорожные маршруты</li>
+                            <li>Все автовокзалы</li>
+                            <li>Все города</li>
+                            <li>Все страны</li>
+                            <li>Автобусные и железнодорожные операторы</li>
+                        </ul>
+                    </div>
+                    <div class="link__wrapper__item">
+                        <p>ПОДДЕРЖКА</p>
+                        <ul>
+                            <li>Помощь</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <footer class="footer">
+            <div class="container">
+                <div class="footer__wrapper">
+                    <div class="footer__rights">© 2023 Busbud Inc., Все права защищены</div>
+                    <div class="footer__link">
+                        <a href="#">Условия использования</a>
+                        <a href="#">Конфиденциальность</a>
+                        <a href="#">Правила в отношении возврата средств</a>
+                    </div>
+                    <div class="footer__down">
+                        <div class="footer__down__icon app">
+                            <img src="img/app-store-badge-ru.avif" alt="" />
+                        </div>
+                        <div class="footer__down__icon">
+                            <img src="img/google-play-badge-ru.avif" alt="" />
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </footer>
+        <script
+            src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.min.js"
+            integrity="sha384-cuYeSxntonz0PPNlHhBs68uyIAVpIIOZZ5JqeqvYYIcEL727kskC66kF92t6Xl2V"
+            crossorigin="anonymous"
+        ></script>
+        <script
+            src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"
+            integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4"
+            crossorigin="anonymous"
+        ></script>
+    </body>
+</html>
